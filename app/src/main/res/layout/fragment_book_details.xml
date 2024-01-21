@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_book_details.xml -->
+<!-- fragment_book_details.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textAuthor"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Author" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            style="@style/BookDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description" />
+
+        <TextView
+            android:id="@+id/textPublisher"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publisher" />
+
+        <TextView
+            android:id="@+id/textPrimaryIsbn10"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primary ISBN-10" />
+
+        <TextView
+            android:id="@+id/textPublishedDate"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Published Date" />
+
+        <TextView
+            android:id="@+id/textRank"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rank" />
+
+        <TextView
+            android:id="@+id/textRankLastWeek"
+            style="@style/BookDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rank Last Week" />
+
+        <TextView
+            android:id="@+id/textBuyLink"
+            style="@style/ClickableLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buy Link" />
+
+    </LinearLayout>
+
+</ScrollView>
+
