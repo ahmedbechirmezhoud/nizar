@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class BooksViewModel : ViewModel() {
     private val BooksService = BookAPI.create();
     val bookListNames: MutableLiveData<List<String>> by lazy { MutableLiveData<List<String>>() }
-    val _booksList: MutableLiveData<List<Book>> by lazy { MutableLiveData<List<Book>>() }
+    private val _booksList: MutableLiveData<List<Book>> by lazy { MutableLiveData<List<Book>>() }
     val booksList: LiveData<List<Book>> = _booksList;
 
     init {

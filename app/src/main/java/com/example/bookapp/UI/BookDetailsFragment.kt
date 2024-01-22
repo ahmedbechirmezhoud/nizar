@@ -41,17 +41,19 @@ class BookDetailsFragment : Fragment() {
             val primaryIsbn10 = bundle.getString("primary_isbn10")
             val publishedDate = bundle.getString("published_date")
             val rank = bundle.getInt("rank", -1)
+            val publisher = bundle.getString("publisher")
             val rankLastWeek = bundle.getInt("rank_last_week", -1)
             buyLink = bundle.getString("buy_link")
             // Set data to the binding
             binding?.apply {
-                textAuthor.text = "Author: $author"
-                textTitle.text = "Title: $title"
-                textDescription.text = "Description: $description"
-                textPrimaryIsbn10.text = "Primary ISBN-10: $primaryIsbn10"
-                textPublishedDate.text = "Published Date: $publishedDate"
-                textRank.text = "Rank: $rank"
-                textRankLastWeek.text = "Rank Last Week: $rankLastWeek"
+                textAuthor.text = author
+                textTitle.text = title
+                textDescription.text = description
+                textPrimaryIsbn10.text = primaryIsbn10
+                textPublishedDate.text = publishedDate
+                textRank.text = rank.toString()
+                textPublisher.text = publisher
+                textRankLastWeek.text = rankLastWeek.toString()
                 createClickableLink(textBuyLink)
             }
         }

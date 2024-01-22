@@ -49,7 +49,6 @@ class BookListAdapter(private var dataSet: List<Book> = emptyList()) :
             bundle.putInt("rank", dataSet[position].rank)
             bundle.putInt("rank_last_week", dataSet[position].rank_last_week)
             bundle.putString("buy_link", dataSet[position].amazon_product_url)
-
             view.findNavController().navigate(R.id.action_booksFragment_to_bookDetailsFragment, bundle)
         }
     }

@@ -17,7 +17,6 @@ import com.example.bookapp.databinding.FragmentBooksBinding
 class BooksFragment : Fragment() {
     private var _binding: FragmentBooksBinding? = null
     private val binding get() = _binding!!
-
     private val viewModal : BooksViewModel by viewModels()
 
     override fun onCreateView(
@@ -39,7 +38,6 @@ class BooksFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             binding.spinner.adapter = adapter
         }
-
 
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

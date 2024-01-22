@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         ConnectivityViewModelFactory(ConnectivityRepository(applicationContext))
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -47,5 +46,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
 }
