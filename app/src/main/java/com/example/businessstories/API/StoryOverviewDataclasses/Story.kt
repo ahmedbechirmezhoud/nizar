@@ -1,6 +1,6 @@
-package com.example.bookapp.API.BookOverviewDataclasses
+package com.example.businessstories.API.BookOverviewDataclasses
 
-data class Book(
+data class Story(
     val age_group: String,
     val amazon_product_url: String,
     val article_chapter_link: String,
@@ -10,7 +10,7 @@ data class Book(
     val book_image_width: Int,
     val book_review_link: String,
     val book_uri: String,
-    val buy_links: List<BuyLink>,
+    val buy_links: List<ReadMoreLink>,
     val contributor: String,
     val contributor_note: String,
     val created_date: String,

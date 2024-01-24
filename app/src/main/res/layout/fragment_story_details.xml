@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_book_details.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/TitleText"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="Title" />
+        </LinearLayout>
+
+
+        <!-- Author -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textAuthor"
+                style="@style/BookDetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author" />
+        </LinearLayout>
+
+        <!-- Description -->
+
+        <!-- Publisher -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textPublishedDateLabel"
+                style="@style/BookDetailsTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Published Date" />
+
+            <TextView
+                android:id="@+id/textPublishedDate"
+                style="@style/BookDetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Published Date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textDescriptionLabel"
+                style="@style/BookDetailsTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abstract" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                style="@style/BookDetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+        </LinearLayout>
+
+        <!-- Primary ISBN-10 -->
+
+        <!-- Published Date -->
+
+        <!-- Rank -->
+
+        <!-- Rank Last Week -->
+
+        <!-- Buy Link -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textBuyLink"
+                style="@style/ClickableLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read more..."
+                android:textAlignment="viewEnd" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

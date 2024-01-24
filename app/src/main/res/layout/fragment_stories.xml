@@ -8,29 +8,13 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".UI.BooksFragment">
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"
-        android:elevation="20dp"
-        android:spinnerMode="dropdown"
-        android:dropDownHeight="100dp"/>
+    tools:context=".UI.StoriesFragment">
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner"
         android:layout_marginTop="8dp"
         tools:listitem="@layout/fragment_book_list_details"
         />

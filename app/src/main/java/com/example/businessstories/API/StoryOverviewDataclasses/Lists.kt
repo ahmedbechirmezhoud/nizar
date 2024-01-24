@@ -1,7 +1,7 @@
-package com.example.bookapp.API.BookOverviewDataclasses
+package com.example.businessstories.API.BookOverviewDataclasses
 
 data class Lists(
-    val books: List<Book>,
+    val stories: List<Story>,
     val display_name: String,
     val list_id: Int,
     val list_image: Any,

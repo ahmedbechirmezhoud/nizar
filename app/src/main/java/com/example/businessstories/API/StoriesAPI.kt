@@ -8,19 +8,19 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class BookAPI {
+class StoriesAPI {
     companion object {
-        private const val BASE_URL = "https://api.nytimes.com/svc/books/v3/"
-        private const val API_KEY = "go3ZW3ruKQaKCfdLNOsAg3BXeZB0yQFg"
+        private const val BASE_URL = "https://api.nytimes.com/svc/topstories/v2/"
+        private const val API_KEY = "Kt12F4Lq4zUyzbmVzI0B5jZAMjtAqfFf"
 
-        fun create(): BooksService {
+        fun create(): StoriesService {
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(ApiAuthTokenInterceptor())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
-            return retrofit.create(BooksService::class.java)
+            return retrofit.create(StoriesService::class.java)
         }
 
         private fun ApiAuthTokenInterceptor(): OkHttpClient {

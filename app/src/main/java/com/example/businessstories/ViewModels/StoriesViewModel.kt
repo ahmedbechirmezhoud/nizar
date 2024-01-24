@@ -4,24 +4,25 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bookapp.API.BookAPI
-import com.example.bookapp.API.BooksDataclasses.Book
+import com.example.bookapp.API.StoriesAPI
+import com.example.bookapp.API.StoriesDataclasses.Story
 import kotlinx.coroutines.launch
 
-class BooksViewModel : ViewModel() {
-    private val BooksService = BookAPI.create();
+class StoriesViewModel : ViewModel() {
+    private val BooksService = StoriesAPI.create();
     val bookListNames: MutableLiveData<List<String>> by lazy { MutableLiveData<List<String>>() }
-    private val _booksList: MutableLiveData<List<Book>> by lazy { MutableLiveData<List<Book>>() }
-    val booksList: LiveData<List<Book>> = _booksList;
+    private val _booksList: MutableLiveData<List<Story>> by lazy { MutableLiveData<List<Story>>() }
+    val booksList: LiveData<List<Story>> = _booksList;
 
     init {
         getBookListNames();
     }
 
-    fun setBookListValue(bookListName: String) {
+    fun setBookListValue() {
         viewModelScope.launch {
             try {
-                val res = BooksService.getBookList(bookListName)
+                val res = BooksService.getStoriesList()
+                println(res)
                 _booksList.value = res.results;
             } catch (e: Exception) {
             }
@@ -31,8 +32,9 @@ class BooksViewModel : ViewModel() {
     fun getBookListNames(){
         viewModelScope.launch {
             try {
-                val res = BooksService.getBookListsNames()
-                bookListNames.value = res.results.map { it.list_name }
+                val res = BooksService.getStoriesList()
+                println(res)
+                bookListNames.value = res.results.map { it.title }
             } catch (e: Exception) {
                 println("e"+e);
             }

@@ -10,7 +10,7 @@
     android:paddingEnd="16dp"
     android:paddingBottom="8dp"
     android:background="@drawable/item_background"
-    tools:context=".UI.BookListDetailsFragment">
+    tools:context=".UI.StoryListDetailsFragment">
 
     <!-- Number on the left -->
 <TextView

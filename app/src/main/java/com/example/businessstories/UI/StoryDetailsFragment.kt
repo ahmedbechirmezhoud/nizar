@@ -11,15 +11,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.bookapp.R
 import com.example.bookapp.databinding.FragmentBookDetailsBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [BookDetailsFragment.newInstance] factory method to
+ * Use the [StoryDetailsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class BookDetailsFragment : Fragment() {
+class StoryDetailsFragment : Fragment() {
     private var buyLink: String? = null
     private var binding: FragmentBookDetailsBinding? = null
 
@@ -38,22 +37,15 @@ class BookDetailsFragment : Fragment() {
             val author = bundle.getString("author")
             val title = bundle.getString("title")
             val description = bundle.getString("description")
-            val primaryIsbn10 = bundle.getString("primary_isbn10")
             val publishedDate = bundle.getString("published_date")
-            val rank = bundle.getInt("rank", -1)
-            val publisher = bundle.getString("publisher")
-            val rankLastWeek = bundle.getInt("rank_last_week", -1)
+
             buyLink = bundle.getString("buy_link")
             // Set data to the binding
             binding?.apply {
                 textAuthor.text = author
                 textTitle.text = title
                 textDescription.text = description
-                textPrimaryIsbn10.text = primaryIsbn10
                 textPublishedDate.text = publishedDate
-                textRank.text = rank.toString()
-                textPublisher.text = publisher
-                textRankLastWeek.text = rankLastWeek.toString()
                 createClickableLink(textBuyLink)
             }
         }
@@ -64,7 +56,7 @@ class BookDetailsFragment : Fragment() {
     }
 
     private fun createClickableLink(textBuyLink: TextView){
-        val buyLinkText = "Buy Link"
+        val buyLinkText = "Read More"
         val buyLinkSpannable = SpannableString(buyLinkText)
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
